@@ -50,5 +50,23 @@ namespace taks1.Tests
 
             Assert.AreEqual(5, scalarProduct);
         }
+
+        [TestMethod()]
+        public void VectorlengthTest()
+        {
+            var vector1 = new Vector(3, 4, 0);
+
+            Assert.AreEqual(5, vector1.Vectorlength());
+        }
+
+        [TestMethod()]
+        public void VectorProductTest()
+        {
+            var vector1 = new Vector(2, -3, 1);
+            var vector2 = new Vector(4, 5, -2);
+            Vector vectorProduct = Vector.VectorProduct(vector1, vector2);
+
+            Assert.AreEqual("1 8 22", vectorProduct.Verbose());
+        }
     }
 }

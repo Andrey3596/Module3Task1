@@ -27,7 +27,7 @@ namespace taks1
             return Math.Sqrt(x * x + y * y + z * z);
         }
 
-        public static Vector VectorProducth(Vector vector1, Vector vector2)
+        public static Vector VectorProduct(Vector vector1, Vector vector2)
         {
             var x = vector1.y * vector2.z - vector2.y * vector1.z;
             var y = vector1.z * vector2.x - vector2.z * vector1.x;
@@ -35,6 +35,7 @@ namespace taks1
             Vector vector3 = new Vector(x, y, z);
             return vector3;
         }
+
         public static Vector operator +(Vector vector1, Vector vector2)
         {
 
