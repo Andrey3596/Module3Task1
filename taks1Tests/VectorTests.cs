@@ -17,5 +17,16 @@ namespace taks1.Tests
             var length = new Vector(10, 1,1);
             Assert.AreEqual("10 1 1", length.Verbose());
         }
+
+        [TestMethod()]
+        public void AddNumberTest()
+        {
+            var vector1 = new Vector(1, 1, 1);
+            var vector2 = new Vector(1, 1, 3);
+
+            var vector3 = vector1 + vector2;
+
+            Assert.AreEqual("2 2 3", vector3.Verbose());
+        }
     }
 }
