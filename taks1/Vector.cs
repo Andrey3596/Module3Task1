@@ -19,7 +19,7 @@ namespace taks1
         }
         public string Verbose()
         {
-            return String.Format("{0} {1} {2}", this.x = x, this.y = y, this.z = z);
+            return String.Format("{0} {1} {2}", this.x, this.y, this.z);
         }
 
         public double Vectorlength()
