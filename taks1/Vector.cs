@@ -32,6 +32,17 @@ namespace taks1
             return vector;
         }
 
-        
+        public static Vector operator -(Vector vector1, Vector vector2)
+        {
+
+            var newx = vector1.x - vector2.x;
+            var newy = vector1.y - vector2.y;
+            var newz = vector1.z - vector2.z;
+
+            var vector = new Vector(newx, newy, newz);
+
+            return vector;
+        }
+
     }
 }

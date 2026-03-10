@@ -19,14 +19,25 @@ namespace taks1.Tests
         }
 
         [TestMethod()]
-        public void AddNumberTest()
+        public void AddVectorTest()
         {
             var vector1 = new Vector(1, 1, 1);
             var vector2 = new Vector(1, 1, 3);
 
             var vector3 = vector1 + vector2;
 
-            Assert.AreEqual("2 2 3", vector3.Verbose());
+            Assert.AreEqual("2 2 4", vector3.Verbose());
+        }
+
+        [TestMethod()]
+        public void SubVectorTest()
+        {
+            var vector1 = new Vector(1, 1, 1);
+            var vector2 = new Vector(1, 1, 3);
+
+            var vector3 = vector1 - vector2;
+
+            Assert.AreEqual("0 0 -2", vector3.Verbose());
         }
     }
 }
