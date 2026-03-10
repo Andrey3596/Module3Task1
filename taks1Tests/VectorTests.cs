@@ -39,5 +39,16 @@ namespace taks1.Tests
 
             Assert.AreEqual("0 0 -2", vector3.Verbose());
         }
+
+        [TestMethod()]
+        public void MulVectorTest()
+        {
+            var vector1 = new Vector(1, 1, 1);
+            var vector2 = new Vector(1, 1, 3);
+
+            var scalarProduct = vector1 * vector2;
+
+            Assert.AreEqual(5, scalarProduct);
+        }
     }
 }
