@@ -22,6 +22,19 @@ namespace taks1
             return String.Format("{0} {1} {2}", this.x = x, this.y = y, this.z = z);
         }
 
+        public double Vectorlength()
+        {
+            return Math.Sqrt(x * x + y * y + z * z);
+        }
+
+        public static Vector VectorProducth(Vector vector1, Vector vector2)
+        {
+            var x = vector1.y * vector2.z - vector2.y * vector1.z;
+            var y = vector1.z * vector2.x - vector2.z * vector1.x;
+            var z = vector1.x * vector2.y - vector2.x * vector1.y;
+            Vector vector3 = new Vector(x, y, z);
+            return vector3;
+        }
         public static Vector operator +(Vector vector1, Vector vector2)
         {
 
@@ -50,11 +63,11 @@ namespace taks1
             var newx = vector1.x * vector2.x;
             var newy = vector1.y * vector2.y;
             var newz = vector1.z * vector2.z;
-
             var sum = newx + newy +  newz;
 
             return sum;
         }
+
 
     }
 }
