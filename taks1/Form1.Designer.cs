@@ -141,7 +141,7 @@
             // 
             textResult.Location = new Point(138, 107);
             textResult.Name = "textResult";
-            textResult.Size = new Size(226, 23);
+            textResult.Size = new Size(86, 23);
             textResult.TabIndex = 13;
             // 
             // label6
@@ -174,10 +174,13 @@
             // cmbOperation
             // 
             cmbOperation.FormattingEnabled = true;
+            cmbOperation.Items.AddRange(new object[] { "+ векторов", "- векторов", "* векторов", "векторное произведение" });
             cmbOperation.Location = new Point(18, 78);
             cmbOperation.Name = "cmbOperation";
-            cmbOperation.Size = new Size(121, 23);
+            cmbOperation.Size = new Size(206, 23);
             cmbOperation.TabIndex = 23;
+            cmbOperation.Text = "Operatios";
+            cmbOperation.SelectedIndexChanged += cmbOperation_SelectedIndexChanged;
             // 
             // label3
             // 
