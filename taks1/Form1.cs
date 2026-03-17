@@ -38,23 +38,23 @@ namespace taks1
 
                 Vector vector2 = new Vector(vector2x, vector2y, vector2z);
 
-                textVectorlength1.Text = vector1.Vectorlength().ToString();
-                textVectorlength2.Text = vector2.Vectorlength().ToString();
+                textVectorlength1.Text = vector1.VectorLength().ToString();
+                textVectorlength2.Text = vector2.VectorLength().ToString();
 
                 var message = "";
                 switch (cmbOperation.Text)
                 {
                     case "+ векторов":
-                        message = (vector1 + vector2).Verbose();
+                        message = (vector1 + vector2).ToString();
                         break;
                     case "- векторов":
-                        message = (vector1 - vector2).Verbose();
+                        message = (vector1 - vector2).ToString();
                         break;
                     case "* векторов":
                         message = (vector1 * vector2).ToString();
                         break;
                     case "векторное произведение":
-                        message = Vector.VectorProduct(vector1, vector2).Verbose();
+                        message = (vector1 / vector2).ToString();
                         break;
                 }
                 textResult.Text = message;

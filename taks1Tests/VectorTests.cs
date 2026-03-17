@@ -14,8 +14,10 @@ namespace taks1.Tests
         [TestMethod()]
         public void VerboseTest()
         {
-            var length = new Vector(10, 1,1);
-            Assert.AreEqual("10 1 1", length.Verbose());
+            var length = new Vector(10, 1,1)
+                ;
+            Vector vectorAnswer = new Vector(10, 1, 1);
+            Assert.AreEqual(vectorAnswer, length);
         }
 
         [TestMethod()]
@@ -26,7 +28,8 @@ namespace taks1.Tests
 
             var vector3 = vector1 + vector2;
 
-            Assert.AreEqual("2 2 4", vector3.Verbose());
+            Vector vectorAnswer = new Vector(2, 2, 4);
+            Assert.AreEqual(vectorAnswer, vector3);
         }
 
         [TestMethod()]
@@ -37,7 +40,8 @@ namespace taks1.Tests
 
             var vector3 = vector1 - vector2;
 
-            Assert.AreEqual("0 0 -2", vector3.Verbose());
+            Vector vectorAnswer = new Vector(0, 0, -2);
+            Assert.AreEqual(vectorAnswer, vector3);
         }
 
         [TestMethod()]
@@ -56,7 +60,7 @@ namespace taks1.Tests
         {
             var vector1 = new Vector(3, 4, 0);
 
-            Assert.AreEqual(5, vector1.Vectorlength());
+            Assert.AreEqual(5, vector1.VectorLength());
         }
 
         [TestMethod()]
@@ -64,9 +68,10 @@ namespace taks1.Tests
         {
             var vector1 = new Vector(2, -3, 1);
             var vector2 = new Vector(4, 5, -2);
-            Vector vectorProduct = Vector.VectorProduct(vector1, vector2);
+            Vector vectorProduct = (vector1/vector2);
 
-            Assert.AreEqual("1 8 22", vectorProduct.Verbose());
+            Vector vectorAnswer = new Vector(1, 8, 22);
+            Assert.AreEqual(vectorAnswer, vectorProduct);
         }
     }
 }

@@ -17,17 +17,30 @@ namespace taks1
             this.y = y;
             this.z = z;
         }
-        public string Verbose()
+        public override string ToString()
         {
-            return String.Format("{0} {1} {2}", this.x, this.y, this.z);
+            return $"{this.x} {this.y} {this.z}";
         }
 
-        public double Vectorlength()
+        public override bool Equals(object? obj)
+        {
+            if (obj is not Vector other)
+                return false;
+
+            return x == other.x && y == other.y && z == other.z;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(x, y, z);
+        }
+
+        public double VectorLength()
         {
             return Math.Sqrt(x * x + y * y + z * z);
         }
 
-        public static Vector VectorProduct(Vector vector1, Vector vector2)
+        public static Vector operator /(Vector vector1, Vector vector2)
         {
             var x = vector1.y * vector2.z - vector2.y * vector1.z;
             var y = vector1.z * vector2.x - vector2.z * vector1.x;
