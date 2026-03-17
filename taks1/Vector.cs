@@ -24,7 +24,8 @@ namespace taks1
 
         public override bool Equals(object? obj)
         {
-            if (obj is not Vector other)
+            Vector other = obj as Vector;
+            if (other == null)
                 return false;
 
             return x == other.x && y == other.y && z == other.z;
