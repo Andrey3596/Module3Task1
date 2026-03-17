@@ -72,7 +72,8 @@
             textVector1x.Name = "textVector1x";
             textVector1x.Size = new Size(31, 23);
             textVector1x.TabIndex = 2;
-            textVector1x.TextChanged += textVector1x_TextChanged;
+            textVector1x.Text = "0";
+            textVector1x.TextChanged += onValueChanged;
             // 
             // textVector2x
             // 
@@ -80,7 +81,8 @@
             textVector2x.Name = "textVector2x";
             textVector2x.Size = new Size(31, 23);
             textVector2x.TabIndex = 3;
-            textVector2x.TextChanged += textVector2x_TextChanged;
+            textVector2x.Text = "0";
+            textVector2x.TextChanged += onValueChanged;
             // 
             // textVector1y
             // 
@@ -88,7 +90,8 @@
             textVector1y.Name = "textVector1y";
             textVector1y.Size = new Size(31, 23);
             textVector1y.TabIndex = 4;
-            textVector1y.TextChanged += textVector1y_TextChanged;
+            textVector1y.Text = "0";
+            textVector1y.TextChanged += onValueChanged;
             // 
             // textVector1z
             // 
@@ -96,7 +99,8 @@
             textVector1z.Name = "textVector1z";
             textVector1z.Size = new Size(31, 23);
             textVector1z.TabIndex = 5;
-            textVector1z.TextChanged += textVector1z_TextChanged;
+            textVector1z.Text = "0";
+            textVector1z.TextChanged += onValueChanged;
             // 
             // textVector2y
             // 
@@ -104,7 +108,8 @@
             textVector2y.Name = "textVector2y";
             textVector2y.Size = new Size(31, 23);
             textVector2y.TabIndex = 6;
-            textVector2y.TextChanged += textVector2y_TextChanged;
+            textVector2y.Text = "0";
+            textVector2y.TextChanged += onValueChanged;
             // 
             // textVector2z
             // 
@@ -112,7 +117,8 @@
             textVector2z.Name = "textVector2z";
             textVector2z.Size = new Size(31, 23);
             textVector2z.TabIndex = 7;
-            textVector2z.TextChanged += textVector2z_TextChanged;
+            textVector2z.Text = "0";
+            textVector2z.TextChanged += onValueChanged;
             // 
             // textVectorlength1
             // 
@@ -120,6 +126,7 @@
             textVectorlength1.Name = "textVectorlength1";
             textVectorlength1.Size = new Size(41, 23);
             textVectorlength1.TabIndex = 10;
+            textVectorlength1.Text = "0";
             // 
             // textVectorlength2
             // 
@@ -127,6 +134,7 @@
             textVectorlength2.Name = "textVectorlength2";
             textVectorlength2.Size = new Size(41, 23);
             textVectorlength2.TabIndex = 11;
+            textVectorlength2.Text = "0";
             // 
             // label5
             // 
@@ -180,7 +188,7 @@
             cmbOperation.Size = new Size(206, 23);
             cmbOperation.TabIndex = 23;
             cmbOperation.Text = "Operatios";
-            cmbOperation.SelectedIndexChanged += cmbOperation_SelectedIndexChanged;
+            cmbOperation.SelectedIndexChanged += onValueChanged;
             // 
             // label3
             // 
